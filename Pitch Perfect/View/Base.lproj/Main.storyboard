@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,14 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recording View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordingViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bX-Bc-x6d">
+                                <rect key="frame" x="165" y="438" width="84" height="30"/>
+                                <state key="normal" title="Start Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Start Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osd-WJ-xYq">
+                                <rect key="frame" x="121" y="475.5" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVO-8Y-lzW">
+                                <rect key="frame" x="166" y="504.5" width="82" height="30"/>
+                                <state key="normal" title="Stop Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="centerX" secondItem="Osd-WJ-xYq" secondAttribute="centerX" id="5fx-2T-1xS"/>
+                            <constraint firstItem="Osd-WJ-xYq" firstAttribute="top" secondItem="4bX-Bc-x6d" secondAttribute="bottom" constant="7.5" id="Fay-N6-5Gb"/>
+                            <constraint firstItem="Osd-WJ-xYq" firstAttribute="centerX" secondItem="4bX-Bc-x6d" secondAttribute="centerX" id="G6l-uE-wfs"/>
+                            <constraint firstItem="4bX-Bc-x6d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KC9-hg-5Yh"/>
+                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="top" secondItem="Osd-WJ-xYq" secondAttribute="bottom" constant="8" id="OHg-UW-7vs"/>
+                            <constraint firstItem="4bX-Bc-x6d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R2q-32-gbw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
