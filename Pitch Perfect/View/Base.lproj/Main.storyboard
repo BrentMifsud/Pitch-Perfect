@@ -36,6 +36,7 @@
                                 <state key="normal" title="Stop Button"/>
                                 <connections>
                                     <action selector="stopRecordingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9L4-og-Cdp"/>
+                                    <segue destination="sef-4L-YOn" kind="show" id="1Df-iO-eUs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,6 +61,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1014" y="673"/>
+        </scene>
+        <!--Playback View Controller-->
+        <scene sceneID="2sn-kg-gol">
+            <objects>
+                <viewController id="sef-4L-YOn" customClass="PlaybackViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8L4-8v-TQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CAw-Ij-bzT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWI-yx-GuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029" y="673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qoe-ID-Lio">

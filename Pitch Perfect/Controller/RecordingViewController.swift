@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordingViewController.swift
 //  Pitch Perfect
 //
 //  Created by Brent Mifsud on 2019-02-23.
@@ -21,7 +21,7 @@ class RecordingViewController: UIViewController {
     }
     
     //MARK:- Methods
-    //MARK: View Init Methods
+    //MARK: View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,6 +30,11 @@ class RecordingViewController: UIViewController {
         super.viewWillAppear(true)
         
         configureUI(.notRecording)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     
     //MARK: Button Event Handler Methods

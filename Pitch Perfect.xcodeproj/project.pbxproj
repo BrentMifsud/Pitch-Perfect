@@ -13,6 +13,7 @@
 		8450A95D2221AEAA00C1D5D7 /* Pitch_Perfect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8450A95B2221AEAA00C1D5D7 /* Pitch_Perfect.xcdatamodeld */; };
 		8450A95F2221AEAC00C1D5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A95E2221AEAC00C1D5D7 /* Assets.xcassets */; };
 		8450A9622221AEAC00C1D5D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A9602221AEAC00C1D5D7 /* LaunchScreen.storyboard */; };
+		8450A96C2221C11500C1D5D7 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A96B2221C11500C1D5D7 /* PlaybackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8450A95E2221AEAC00C1D5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450A9612221AEAC00C1D5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450A9632221AEAC00C1D5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8450A96B2221C11500C1D5D7 /* PlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				8450A9562221AEAA00C1D5D7 /* RecordingViewController.swift */,
+				8450A96B2221C11500C1D5D7 /* PlaybackViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8450A9572221AEAA00C1D5D7 /* RecordingViewController.swift in Sources */,
+				8450A96C2221C11500C1D5D7 /* PlaybackViewController.swift in Sources */,
 				8450A9552221AEAA00C1D5D7 /* AppDelegate.swift in Sources */,
 				8450A95D2221AEAA00C1D5D7 /* Pitch_Perfect.xcdatamodeld in Sources */,
 			);
