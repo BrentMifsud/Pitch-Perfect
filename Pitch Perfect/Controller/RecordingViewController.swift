@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordingViewController: UIViewController {
 
@@ -14,6 +15,10 @@ class RecordingViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
+    
+    private let url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    private let filename = "voiceRecording.aac"
+    private var audioRecorder: AVAudioRecorder!
     
     enum RecordingState: String {
         case recording = "Recording in Progress..."
@@ -39,12 +44,19 @@ class RecordingViewController: UIViewController {
     
     //MARK: Button Event Handler Methods
     @IBAction func recordButtonPressed(_ sender: Any) {
-        //TODO add recording code here
+        let filePath = URL(string: "\(url)\(filename)")
+        
+        print("\(filePath)")
+        
+        startRecording(to: filePath!)
+        
         configureUI(.recording)
+        
+        
     }
     
     @IBAction func stopRecordingButtonPressed(_ sender: Any) {
-        //TODO add stop recording code here
+        stopRecording()
         configureUI(.notRecording)
     }
     
@@ -60,7 +72,46 @@ class RecordingViewController: UIViewController {
             self.recordingLabel.text = recordingState.rawValue
         }
     }
+}
+
+//MARK:- AVAudioRecorder Control Methods
+extension RecordingViewController: AVAudioRecorderDelegate {
+    func startRecording(to url: URL) {
+        do{
+            //Initialize AVAudioRecorder
+            audioRecorder = try AVAudioRecorder(
+                url: url,
+                settings: [
+                    AVFormatIDKey:Int(kAudioFormatMPEG4AAC),
+                    AVSampleRateKey: 8000,
+                    AVNumberOfChannelsKey: 2,
+                    AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+                ]
+            )
+            //Set AVAudioRecorder Delegate
+            audioRecorder.delegate = self
+            
+            //Delete existing file
+            audioRecorder.deleteRecording()
+            
+            //Create audio file and begin recording
+            audioRecorder.prepareToRecord()
+            audioRecorder.record()
+        } catch {
+            print("Error Initializing Audio Recorder: \(error)")
+        }
+    }
     
-    //MARK: AVFoundation Methods
+    func pauseRecording() {
+        audioRecorder.pause()
+    }
+    
+    func continueRecording() {
+        audioRecorder.record()
+    }
+    
+    func stopRecording(){
+        audioRecorder.stop()
+    }
 }
 
