@@ -56,15 +56,31 @@
 		8450A9532221AEAA00C1D5D7 /* Pitch Perfect */ = {
 			isa = PBXGroup;
 			children = (
+				8450A96A2221B01900C1D5D7 /* Controller */,
+				8450A9692221B01000C1D5D7 /* View */,
 				8450A9542221AEAA00C1D5D7 /* AppDelegate.swift */,
-				8450A9562221AEAA00C1D5D7 /* ViewController.swift */,
-				8450A9582221AEAA00C1D5D7 /* Main.storyboard */,
 				8450A95E2221AEAC00C1D5D7 /* Assets.xcassets */,
-				8450A9602221AEAC00C1D5D7 /* LaunchScreen.storyboard */,
 				8450A9632221AEAC00C1D5D7 /* Info.plist */,
 				8450A95B2221AEAA00C1D5D7 /* Pitch_Perfect.xcdatamodeld */,
 			);
 			path = "Pitch Perfect";
+			sourceTree = "<group>";
+		};
+		8450A9692221B01000C1D5D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8450A9582221AEAA00C1D5D7 /* Main.storyboard */,
+				8450A9602221AEAC00C1D5D7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8450A96A2221B01900C1D5D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8450A9562221AEAA00C1D5D7 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
