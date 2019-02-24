@@ -42,8 +42,11 @@ class RecordingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "playbackViewController" {
+            let targetViewController = segue.destination as! PlaybackViewController
+            targetViewController.audioUrl = (sender as! URL)
+        }
+        
     }
     
     //MARK: Button Event Handler Methods
@@ -56,8 +59,9 @@ class RecordingViewController: UIViewController {
             case .paused:
                 continueRecording()
             case .recording:
-                print("Invalid recording state for record button: \(recordingState.debugDescription)")
+                print("This Scenario can not happen")
         }
+        
         configureUI()
     }
     
@@ -93,14 +97,15 @@ class RecordingViewController: UIViewController {
     }
 }
 
+
 //MARK:- AVAudioRecorder Control Methods
 extension RecordingViewController: AVAudioRecorderDelegate {
     func startRecording(to url: URL) {
         let audioSession = AVAudioSession.sharedInstance()
-        
+
         do {
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .defaultToSpeaker)
-            
+
         } catch {
             print("Recording Audio Session Error: \(error)")
         }
@@ -147,6 +152,14 @@ extension RecordingViewController: AVAudioRecorderDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         recordingState = .notRecording
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag {
+            performSegue(withIdentifier: "playbackViewController", sender: audioRecorder.url)
+        } else {
+            print("Failed to stop Recording!")
+        }
     }
 }
 

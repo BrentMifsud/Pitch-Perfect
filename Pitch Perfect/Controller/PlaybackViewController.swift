@@ -9,6 +9,9 @@
 import UIKit
 
 class PlaybackViewController: UIViewController {
+    
+    var audioUrl: URL!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
