@@ -31,8 +31,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgz-cE-vri" userLabel="Pause Button">
+                                <rect key="frame" x="161" y="530" width="92" height="30"/>
+                                <state key="normal" title="Pause Button"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zH8-N3-g4g"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVO-8Y-lzW">
-                                <rect key="frame" x="166" y="526.5" width="82" height="30"/>
+                                <rect key="frame" x="166" y="568" width="82" height="30"/>
                                 <state key="normal" title="Stop Button"/>
                                 <connections>
                                     <action selector="stopRecordingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9L4-og-Cdp"/>
@@ -42,17 +49,21 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="centerX" secondItem="Osd-WJ-xYq" secondAttribute="centerX" id="5fx-2T-1xS"/>
+                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="centerX" secondItem="cgz-cE-vri" secondAttribute="centerX" id="0Lz-ot-whm"/>
+                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="top" secondItem="cgz-cE-vri" secondAttribute="bottom" constant="8" id="DH1-lQ-NGg"/>
                             <constraint firstItem="Osd-WJ-xYq" firstAttribute="top" secondItem="4bX-Bc-x6d" secondAttribute="bottom" constant="7.5" id="Fay-N6-5Gb"/>
                             <constraint firstItem="Osd-WJ-xYq" firstAttribute="centerX" secondItem="4bX-Bc-x6d" secondAttribute="centerX" id="G6l-uE-wfs"/>
                             <constraint firstItem="4bX-Bc-x6d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KC9-hg-5Yh"/>
-                            <constraint firstItem="ZVO-8Y-lzW" firstAttribute="top" secondItem="Osd-WJ-xYq" secondAttribute="bottom" constant="8" id="OHg-UW-7vs"/>
                             <constraint firstItem="4bX-Bc-x6d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R2q-32-gbw"/>
+                            <constraint firstItem="cgz-cE-vri" firstAttribute="centerX" secondItem="Osd-WJ-xYq" secondAttribute="centerX" id="Ua5-WT-nVf"/>
+                            <constraint firstItem="cgz-cE-vri" firstAttribute="top" secondItem="Osd-WJ-xYq" secondAttribute="bottom" constant="11.5" id="sYs-hK-aqR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZVO-8Y-lzW" secondAttribute="bottom" constant="264" id="vc1-3b-6lU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="U9p-P7-4fu"/>
                     <connections>
+                        <outlet property="pauseButton" destination="cgz-cE-vri" id="dlx-lA-0hn"/>
                         <outlet property="recordingLabel" destination="Osd-WJ-xYq" id="pwb-mF-pIy"/>
                         <outlet property="startButton" destination="4bX-Bc-x6d" id="sIm-wl-LgK"/>
                         <outlet property="stopButton" destination="ZVO-8Y-lzW" id="hn1-gy-SfE"/>
