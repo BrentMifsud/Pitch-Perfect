@@ -87,7 +87,6 @@
         <!--Playback View Controller-->
         <scene sceneID="2sn-kg-gol">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bWI-yx-GuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sef-4L-YOn" customClass="PlaybackViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8L4-8v-TQd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -188,6 +187,7 @@
                         <outlet property="stopButton" destination="tNz-yX-I2T" id="o8a-Ut-LJV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWI-yx-GuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2028.985507246377" y="672.99107142857144"/>
         </scene>
