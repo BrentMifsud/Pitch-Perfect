@@ -38,31 +38,35 @@ class PlaybackViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //Fix squished buttons when small devices are in landscape orientation
         slowButton.imageView?.contentMode = .scaleAspectFit
         fastButton.imageView?.contentMode = .scaleAspectFit
         highPitchButton.imageView?.contentMode = .scaleAspectFit
         lowPitchButton.imageView?.contentMode = .scaleAspectFit
         echoButton.imageView?.contentMode = .scaleAspectFit
         reverbButton.imageView?.contentMode = .scaleAspectFit
+        
+        configureUI(.notPlaying)
     }
     
     @IBAction func playbackButtonPressed(_ sender: UIButton){
         switch ButtonType(rawValue: sender.tag)! {
             case .slow:
-                print("slow button pressed")
+                playSound(rate: 0.5)
             case .fast:
-                print("fast button pressed")
+                playSound(rate: 1.5)
             case .highPitch:
-                print("highpitch button pressed")
+                playSound(pitch: 1000)
             case .lowPitch:
-                print("lowpitch button pressed")
+                playSound(pitch: -1000)
             case .echo:
-                print("echo button pressed")
+                playSound(echo: true)
             case .reverb:
-                print("reverb button pressed")
+                playSound(reverb: true)
         }
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
+        stopAudio()
     }
 }
