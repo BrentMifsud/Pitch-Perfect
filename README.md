@@ -5,8 +5,7 @@
 ### Record a sound with the record button: 
 ![record](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Record.imageset/Record.png)
 
-### You can pause recording with the pause button:
-![pause](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Pause.imageset/Pause.png)
+You can pause recording with the pause button
 
 ### Below are the various sound options:
 ![slow](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Slow.imageset/Slow.png)  slows down the recorded sound 
@@ -21,5 +20,7 @@
 
 ![reverb](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Reverb.imageset/Reverb.png) adds a reverb effect
 
-## Contributors
-Udacity - provided audio extension class
+## Sources
+Udacity - provided audio extension class and art assets.
+
+jMelvins - stackoverflow answer about AVAudioRecorder usage [found here](https://stackoverflow.com/questions/54206398/how-to-record-an-audio-stream-for-save-it-in-file-swift-4-2/54206930#54206930)
