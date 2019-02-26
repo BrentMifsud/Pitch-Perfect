@@ -18,5 +18,5 @@
 
 ![reverb](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Reverb.imageset/Reverb.png) adds a reverb effect
 
-Contributors:
-Udacity - providing audio extension class
+##Contributors
+- Udacity for providing audio extension class
