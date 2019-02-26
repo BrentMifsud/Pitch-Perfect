@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaybackViewController: UIViewController {
     
@@ -17,9 +18,17 @@ class PlaybackViewController: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var pauseButton: UIButton!
     
     var audioUrl: URL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
+    
+    
+    enum ButtonType: Int {
+        case slow = 0, fast, highPitch, lowPitch, echo, reverb
+    }
     
 
     override func viewDidLoad() {
@@ -36,5 +45,24 @@ class PlaybackViewController: UIViewController {
         echoButton.imageView?.contentMode = .scaleAspectFit
         reverbButton.imageView?.contentMode = .scaleAspectFit
     }
-
+    
+    @IBAction func playbackButtonPressed(_ sender: UIButton){
+        switch ButtonType(rawValue: sender.tag)! {
+            case .slow:
+                print("slow button pressed")
+            case .fast:
+                print("fast button pressed")
+            case .highPitch:
+                print("highpitch button pressed")
+            case .lowPitch:
+                print("lowpitch button pressed")
+            case .echo:
+                print("echo button pressed")
+            case .reverb:
+                print("reverb button pressed")
+        }
+    }
+    
+    @IBAction func stopButtonPressed(_ sender: Any) {
+    }
 }

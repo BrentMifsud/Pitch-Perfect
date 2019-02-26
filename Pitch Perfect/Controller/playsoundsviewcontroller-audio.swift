@@ -10,7 +10,7 @@ import AVFoundation
 
 // MARK: - PlaySoundsViewController: AVAudioPlayerDelegate
 
-extension PlaySoundsViewController: AVAudioPlayerDelegate {
+extension PlaybackViewController: AVAudioPlayerDelegate {
     
     // MARK: Alerts
     
@@ -36,7 +36,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     func setupAudio() {
         // initialize (recording) audio file
         do {
-            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
+            audioFile = try AVAudioFile(forReading: audioUrl as URL)
         } catch {
             showAlert(Alerts.AudioFileError, message: String(describing: error))
         }        
@@ -99,7 +99,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             }
             
             // schedule a stop timer for when audio finishes playing
-            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsViewController.stopAudio), userInfo: nil, repeats: false)
+            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaybackViewController.stopAudio), userInfo: nil, repeats: false)
             RunLoop.main.add(self.stopTimer!, forMode: RunLoop.Mode.default)
         }
         
@@ -154,10 +154,10 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     func setPlayButtonsEnabled(_ enabled: Bool) {
-        snailButton.isEnabled = enabled
-        chipmunkButton.isEnabled = enabled
-        rabbitButton.isEnabled = enabled
-        vaderButton.isEnabled = enabled
+        slowButton.isEnabled = enabled
+        fastButton.isEnabled = enabled
+        highPitchButton.isEnabled = enabled
+        lowPitchButton.isEnabled = enabled
         echoButton.isEnabled = enabled
         reverbButton.isEnabled = enabled
     }
