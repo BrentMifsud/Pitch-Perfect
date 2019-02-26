@@ -118,8 +118,8 @@ extension RecordingViewController: AVAudioRecorderDelegate {
                 settings: [
                     AVFormatIDKey:Int(kAudioFormatMPEG4AAC),
                     AVSampleRateKey: 8000,
-                    AVNumberOfChannelsKey: 2,
-                    AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+                    AVNumberOfChannelsKey: 1,
+                    AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
                 ]
             )
             //Set AVAudioRecorder Delegate
