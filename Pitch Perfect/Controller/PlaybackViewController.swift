@@ -11,6 +11,8 @@ import AVFoundation
 
 class PlaybackViewController: UIViewController {
     
+    //MARK:- Properties
+    //MARK: Button Outlets
     @IBOutlet weak var slowButton: UIButton!
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var highPitchButton: UIButton!
@@ -19,6 +21,7 @@ class PlaybackViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    //MARK: Class Properties
     var audioUrl: URL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -31,6 +34,8 @@ class PlaybackViewController: UIViewController {
     }
     
 
+    //MARK:- Methods
+    //MARK: View Init Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
@@ -48,6 +53,7 @@ class PlaybackViewController: UIViewController {
         configureUI(.notPlaying)
     }
     
+    //MARK: Button Methods
     @IBAction func playbackButtonPressed(_ sender: UIButton){
         switch ButtonType(rawValue: sender.tag)! {
             case .slow:
