@@ -5,6 +5,9 @@
 ### Record a sound with the record button: 
 ![record](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Record.imageset/Record.png)
 
+### You can pause recording with the pause button:
+![pause](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Pause.imageset/Pause.png)
+
 ### Below are the various sound options:
 ![slow](https://github.com/BrentMifsud/Pitch-Perfect/blob/master/Pitch%20Perfect/Assets.xcassets/Slow.imageset/Slow.png)  slows down the recorded sound 
 
