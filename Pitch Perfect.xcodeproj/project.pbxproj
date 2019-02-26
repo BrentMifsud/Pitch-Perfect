@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844A93292224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A93282224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift */; };
 		8450A9552221AEAA00C1D5D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9542221AEAA00C1D5D7 /* AppDelegate.swift */; };
 		8450A9572221AEAA00C1D5D7 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9562221AEAA00C1D5D7 /* RecordingViewController.swift */; };
 		8450A95A2221AEAA00C1D5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A9582221AEAA00C1D5D7 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844A93282224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "playsoundsviewcontroller-audio.swift"; path = "/Users/brent/repos/iOS/Pitch Perfect/Pitch Perfect/Controller/playsoundsviewcontroller-audio.swift"; sourceTree = "<absolute>"; };
 		8450A9512221AEAA00C1D5D7 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450A9542221AEAA00C1D5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450A9562221AEAA00C1D5D7 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		8450A96A2221B01900C1D5D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				844A93282224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift */,
 				8450A9562221AEAA00C1D5D7 /* RecordingViewController.swift */,
 				8450A96B2221C11500C1D5D7 /* PlaybackViewController.swift */,
 			);
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8450A9572221AEAA00C1D5D7 /* RecordingViewController.swift in Sources */,
+				844A93292224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift in Sources */,
 				8450A96C2221C11500C1D5D7 /* PlaybackViewController.swift in Sources */,
 				8450A9552221AEAA00C1D5D7 /* AppDelegate.swift in Sources */,
 				8450A95D2221AEAA00C1D5D7 /* Pitch_Perfect.xcdatamodeld in Sources */,

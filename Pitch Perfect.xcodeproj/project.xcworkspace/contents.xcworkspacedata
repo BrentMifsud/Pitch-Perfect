@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Pitch Perfect.xcodeproj">
+      location = "group:/Users/brent/repos/iOS/Pitch Perfect/Pitch Perfect/Controller/playsoundsviewcontroller-audio.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
