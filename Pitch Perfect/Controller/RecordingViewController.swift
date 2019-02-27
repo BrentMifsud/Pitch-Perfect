@@ -154,8 +154,14 @@ extension RecordingViewController: AVAudioRecorderDelegate {
         if flag {
             performSegue(withIdentifier: "playbackViewController", sender: audioRecorder.url)
         } else {
-            print("Failed to stop Recording!")
+            showAlert("Error", message: "Audio Failed to Record")
         }
+    }
+    
+    func showAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
