@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		844A93282224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "playsoundsviewcontroller-audio.swift"; path = "/Users/brent/repos/iOS/Pitch Perfect/Pitch Perfect/Controller/playsoundsviewcontroller-audio.swift"; sourceTree = "<absolute>"; };
+		844A93282224BDF7002FC1C1 /* playsoundsviewcontroller-audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "playsoundsviewcontroller-audio.swift"; sourceTree = "<group>"; };
 		8450A9512221AEAA00C1D5D7 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450A9542221AEAA00C1D5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450A9562221AEAA00C1D5D7 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
