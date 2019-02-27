@@ -31,10 +31,6 @@ class RecordingViewController: UIViewController {
     
     //MARK:- Methods
     //MARK: View Controller Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         recordingState = .notRecording
